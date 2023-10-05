@@ -3,18 +3,19 @@
 
 int main(int argc, char *argv[])
 {
-  int x;
+  int c;
+  int num = 0;
   
-  printf("input number : ");
-  scanf("%i",&x);
+  printf("input a string : ");
   
-  if(x > 0)
-       { printf("absolute value is %i.\n", x); }
-  else if(x == 0)
-       { printf("absolute value is %i.\n", x); }
-  else if(x < 0)
-       { printf("absolute value is %i.\n", -x); }
-  
+  while ( (c = getchar( )) != '\n')// getchar()는 문자저장 
+  {
+        if((c >= '0') && (c <= '9'))
+             { (num = num + 1); }
+  }
+
+  printf("the number of digits is : %i\n", num);
+
   system("PAUSE");	
   return 0;
 }
